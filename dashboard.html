@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LeadFlow Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>LeadFlow CRM</h2>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="main">
+
+<h1>Lead Dashboard</h1>
+
+<div class="stats">
+Total Leads : <span id="count">0</span>
+</div>
+
+<input id="search" placeholder="Search leads..." onkeyup="searchLead()">
+
+<div class="form">
+
+<input id="name" placeholder="Client Name">
+<input id="email" placeholder="Email">
+<input id="source" placeholder="Lead Source">
+<input id="notes" placeholder="Notes / Follow up">
+
+<select id="status">
+<option>New</option>
+<option>Contacted</option>
+<option>Converted</option>
+</select>
+
+<button onclick="addLead()">Add Lead</button>
+
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Source</th>
+<th>Status</th>
+<th>Notes</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="leadTable"></tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
